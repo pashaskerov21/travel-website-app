@@ -1,0 +1,107 @@
+header {
+    width: 100%;
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+    z-index: 999;
+
+    &.fixed-top {
+        animation: fix-header 0.5s ease forwards;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-button {
+        font-size: 28px;
+        color: #fff !important;
+
+        .icon {
+            color: #fff !important;
+        }
+    }
+
+    .nav-menu {
+        position: absolute;
+        width: 100%;
+        min-height: 95vh;
+        top: 80px;
+        left: -100%;
+        background-color: #242222;
+        opacity: 0;
+
+        &.active {
+            left: 0;
+            opacity: 1;
+        }
+
+        li {
+            width: 100%;
+            min-height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #fff;
+
+                a {
+                    color: #000;
+                }
+            }
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 80px;
+                color: #fff;
+                font-weight: 600;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    header {
+        .nav-menu {
+            position: relative;
+            width: auto;
+            min-width: 60%;
+            min-height: 80px;
+            top: 0;
+            left: 0;
+            opacity: 1;
+            background-color: transparent;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            li {
+                width: auto;
+                padding: 0 30px;
+            }
+        }
+    }
+}
+
+@keyframes fix-header {
+    0% {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

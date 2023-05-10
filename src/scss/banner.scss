@@ -1,0 +1,81 @@
+section.banner {
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+    }
+    .content{
+        position: absolute;
+        top: 0;
+        width: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    h1 {
+        font-size: 30px;
+        color: #fff;
+        margin-bottom: 10px;
+    }
+
+    P {
+        color: #fff;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .home-btns {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        button {
+            margin: 10px;
+        }
+    }
+    &.services{
+        background-image: url('./../asset/images/img-9.jpg');
+    }
+    &.products{
+        background-image: url('./../asset/images/img-1.jpg');
+    }
+    &.sign-up{
+        background-image: url('./../asset/images/img-8.jpg');
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    section.banner {
+        h1 {
+            font-size: 100px;
+        }
+
+        p {
+            font-size: 34px;
+        }
+
+        .home-btns {
+            flex-direction: row;
+        }
+    }
+}
