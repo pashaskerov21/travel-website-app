@@ -11,7 +11,7 @@ function ServiceSection() {
         <div className="row card-row">
           {
             cardContextArr.map(item => (
-              <div key={item.id} className="col-12 col-md-6 col-lg-4 ">
+              <div key={item.id} className="col-12 col-md-6 col-xl-4 ">
                 <ServiceCard src={item.src} text={item.text} label={item.label} path={item.path} />
               </div>
             ))
